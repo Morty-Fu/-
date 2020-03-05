@@ -1,0 +1,15 @@
+bool validate(double a,double b,double c)
+{
+    return a+b>c&&a+c>b&&b+c>a;
+
+}
+double getArea(double a,double b,double c)
+{
+    if(validate(a,b,c))
+    {
+        double s=(a+b+c)/2.0,area;
+        return area=sqrt(s*(s-a)*(s-b)*(s-c));
+        
+    }
+    return 0;
+}
