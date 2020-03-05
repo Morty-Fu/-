@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int f,y=0;
+    scanf("%d",&f);
+    while(f!=1)
+    {
+        if(f%2==0){
+            f=f/2;
+            y++;
+        }
+        else{
+            f=f*3+1;
+            f=f/2;
+            y++;}
+    }
+    printf("%d",y);
+    return 0;
+
+}
