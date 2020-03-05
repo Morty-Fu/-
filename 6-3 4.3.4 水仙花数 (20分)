@@ -1,0 +1,10 @@
+bool narcissistic(int number)
+{
+    if(number>999)
+    return 0;
+    else{
+    
+    int i=number%10,f=number/10%10,y=number/100;
+    return number==i*i*i+f*f*f+y*y*y;}
+    
+}
