@@ -1,0 +1,14 @@
+#include<stdio.h>
+#define p 3.14
+int main()
+{
+    double r;
+    scanf("%lf",&r);
+    printf("area=%.2f\ncircle=%.2f",p*r*r,2*p*r);
+ 
+
+
+
+
+    return 0;
+}
