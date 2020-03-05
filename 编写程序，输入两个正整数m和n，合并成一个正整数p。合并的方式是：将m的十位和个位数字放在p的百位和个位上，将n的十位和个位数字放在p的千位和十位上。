@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,e,f,g,h;
+    scanf("%d %d",&a,&b);
+    if(a<100){
+        if(b<100)
+            {c=a%10;//de dao 7
+            d=a/10;//de dao 5
+            e=b%10;//de dao 3
+            f=b/10;//de dao 6
+            printf("p=%d",f*1000+d*100+e*10+c);}
+        else
+            {
+            g=b%100;    
+            c=a%10;//de dao 7
+            d=a/10;//de dao 5
+            e=g%10;//de dao 3
+            f=g/10;//de dao 6
+            printf("p=%d",f*1000+d*100+e*10+c);}            
+            }
+    else{
+        if(b<100)
+            {
+            h=a%100;
+            c=h%10;//de dao 7
+            d=h/10;//de dao 5
+            e=b%10;//de dao 3
+            f=b/10;//de dao 6
+            printf("p=%d",f*1000+d*100+e*10+c);}
+        else
+        {    
+            g=b%100;
+            h=a%100;
+            c=h%10;//de dao 7
+            d=h/10;//de dao 5
+            e=g%10;//de dao 3
+            f=g/10;//de dao 6
+            printf("p=%d",f*1000+d*100+e*10+c);
+        }}
+    return 0;
+}
