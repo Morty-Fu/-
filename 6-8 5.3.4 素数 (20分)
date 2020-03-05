@@ -1,0 +1,15 @@
+bool isPrime(int mum)
+{
+    int i,m;
+    for(i=2;i<=mum;i++)
+    {
+        m=mum%i;
+        if(m==0)break;
+    }
+    if(i<mum)
+    return 0;
+    else
+    return 1;
+
+    
+}
