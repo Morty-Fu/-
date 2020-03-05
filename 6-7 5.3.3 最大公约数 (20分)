@@ -1,0 +1,26 @@
+int gcd(int m,int n)
+{
+    int i,t;
+    if(m<n){
+
+    t=n;
+    n=m;
+    m=t;}
+    if(m%n==0)
+    return n;
+    else
+    {
+        for(i=1;i!=0;i++){
+        t=m%n;
+        m=n;
+        n=t;
+        if(n==0)
+        break;}
+        return m;
+
+
+    }
+    
+    
+
+}
