@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    double a,c;
+    cin>>a;
+    c=a/1.60934;
+    cout<<c;
+    return 0;
+}
