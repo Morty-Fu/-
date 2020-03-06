@@ -1,0 +1,38 @@
+ElementType Max( ElementType S[], int N )
+{
+    int i,a,j;
+    double t;
+    for(j=N-1;j>=1;j--)
+    {
+        for(i=0;i+1<=j;i++)
+        {
+            if(S[i]>S[i+1])
+            {
+                t=S[i+1];
+                S[i+1]=S[i];
+                S[i]=t;
+
+            }
+        }
+    }
+    return S[N-1];
+}
+/*上面的方法为沉积法，或者冒泡法,下面的是另外一种*/
+ElementType Max( ElementType S[], int N )
+{
+    int i,j;
+    double t;
+    for(i=0;i<=N-2;i++)
+    {
+        for(j=i+1;j<=N-1;j++)
+        {
+            if(S[i]>S[j])
+            {
+                t=S[j];
+                S[j]=S[i];
+                S[i]=t;
+            }
+        }
+    }
+    return S[N-1];
+}
