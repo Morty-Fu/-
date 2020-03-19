@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+
+    int number;
+    char ch;
+    int n;
+    int i,j,k;
+    scanf("%d %c",&number,&ch);
+    //通过观察我们可以知道第n个图案,需要打印的符号个数为2*n*n-1;
+    //2*n*n-1=number ==> n = sqrt((number+1)/2)
+    n = sqrt((number+1)/2);
+    //判断最后多出来的图案的个数
+    int res = number - (2*n*n-1);
+    //打印倒三角图案
+    //控制打印行数
+    for (i = n; i >= 1; i--)
+    {
+        //控制每行前空格数
+        for (k = 1; k <= n-i; k++) {
+                printf(" ");
+        }
+        //控制每图案的个数
+        for (j = 1; j <= 2*i-1; j++) {
+            printf("%c",ch);
+        }
+        printf("\n");
+    }
+   //打印正三角图案
+   //控制打印行数
+   for (i = 2; i <= n; i++)
+    {
+        //控制每行前空格数
+        for (k = 1; k <= n-i; k++) {
+                printf(" ");
+        }
+        //控制每图案的个数
+        for (j = 1; j <= 2*i-1; j++) {
+            printf("%c",ch);
+        }
+        printf("\n");
+    }
+        printf("%d\n",res);
+    // system("pause");
+    // getch();
+    return 0;
+}
