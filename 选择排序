@@ -1,0 +1,39 @@
+#include<iostream>
+
+using  namespace  std;
+
+const int  NUM = 10;
+
+ int main( )
+
+ {   int  a[NUM], i, j, t,k;
+
+    cout<<"请输入" << NUM<< "个整数\n";
+
+    for(i=0;i<NUM;i++)  
+
+         cin>>a[i];
+
+    for(i=0; i<NUM-1; i++)
+
+       {  k=i;
+
+          for(j=i+1;j<NUM;j++)
+
+                 if(a[k]>a[j])  k=j;           
+
+          if(k!=i)          
+
+              {   t=a[i];    a[i]=a[k];    a[k]=t;  }   
+
+         }
+
+    cout<<"排好序的整数为:\n";
+
+    for(i=0;i<NUM;i++)
+
+           cout<<a[i] << " "; 
+
+    return 0;
+
+ }
