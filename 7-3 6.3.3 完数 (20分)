@@ -1,0 +1,19 @@
+ #include<stdio.h>
+ int main()
+ {
+	int jhe=0;
+	for(int i=2;i<=1000;i++,jhe=0)
+	{
+		for(int j=1;j<=i/2;j++)
+		if(i%j==0)jhe+=j;
+		if(i==jhe)
+		{
+		printf("%d=1",i);
+		for(int j=2;j<=i/2;j++)
+		if(i%j==0)
+		printf("+%d",j);
+		printf("\n");
+		}
+	}
+	return 0;
+ }
