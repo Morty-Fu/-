@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+    int h,m,s,jiayou; char c1,c2;
+    scanf("%d %c %d %c %d",&h,&c1,&m,&c2,&s);
+    scanf("%d",&jiayou);
+    jiayou=jiayou+h*60*60+m*60+s;
+    h=((jiayou-jiayou%(60*60))/(60*60));
+    m=(jiayou-h*60*60-(jiayou-h*60*60)%60)/60;
+    s=jiayou-h*60*60-m*60;
+    h=h%24;
+    if(h<10) printf("0%d",h);
+    else printf("%d");
+    printf("%c",c1);
+    if(m<10) printf("0%d",m);
+    else printf("%d",m);
+    printf("%c",c2);
+    if(s<10) printf("0%d",s);
+    else printf("%d",s);
+}
