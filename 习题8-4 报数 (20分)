@@ -1,0 +1,41 @@
+void CountOff( int n, int m, int out[] )
+{
+    int k=1;
+    int i,j,t;
+    for(i=0;i<n;i++)
+        out[i]=0;
+    i=0;
+    t=-1;
+    while(k<=n)
+    {
+        t++;             /*t作为玩家序号*/
+        i++;             /*i作为报的数*/
+        if(out[t]!=0)    /*若报数到已经out掉的玩家，则跳过*/
+            i--;
+        if(i==m)         /*报到m时，让i=0，使下一个玩家重新从1开始报数*/
+        {
+            i=0;
+            out[t]=k++;
+        }
+        if(t>=n-1)        /*报道最后一个玩家时重新从第一个玩家开始报数*/
+            t=-1;         /*注意让t=-1，下一轮循环时t会先自增成0*/
+    }
+}
+void CountOff( int n, int m, int out[] )
+{
+    for(int r=0;r<n;r++)
+    out[r]=0;
+    int k=1,i=0,t=0;
+    while(k<=n)
+    {
+        i++;
+        t++;
+        if(out[t-1]!=0) i--;
+        if(i==m)
+        {
+            out[t-1]=k++;
+            i=0;
+        }
+        if(t==n) t=0;
+    }
+}
